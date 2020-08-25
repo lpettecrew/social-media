@@ -1,0 +1,26 @@
+/*
+===============
+POST HEADER
+===============
+*/
+
+.feed-title__h1 {
+    text-align: center;
+    width: 100%;
+    padding: 24px;
+}
+
+.feed {
+    padding: 32px;
+}
+
+/*
+===============
+GREETING
+===============
+*/
+
+.home .greeting {
+    text-align: center;
+    padding: 32px;
+}

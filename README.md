@@ -18,5 +18,5 @@ A social media app that allows users to send messages, making a post, as well as
 - Create an inbox for unread direct messages
 - Allow users to add friends.
 - Ability to view someone else's page, retrieving their posts.
-- Create a user page at "social-media/{username}", which is accessible by other users.
+- Create a user page at "user/{username}", which is accessible by other users.
 - If the user is visiting their own page, present them with a different interface that allows them to edit their public details.

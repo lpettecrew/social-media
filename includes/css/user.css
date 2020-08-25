@@ -1,0 +1,38 @@
+.user {
+    padding: 64px 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user .preview-image-outer {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    max-width: 500px;
+    padding: 16px;
+}
+
+.user .bio {
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    font-size: 1.25em;
+    padding: 16px;
+}
+
+.bio textarea {
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 1em;
+    min-height: 180px;
+    background-color: #141414;
+    border: 0;
+    color: white;
+    border-radius: 15px;
+    padding: 16px;
+    outline: 0;
+}

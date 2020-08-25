@@ -1,0 +1,17 @@
+.about-outer {
+    font-size: 1.5em;
+    padding: 64px;
+    text-align: center;
+    position: relative;
+    min-height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
