@@ -1,7 +1,7 @@
 <?php
 session_start();
 // connect to database
-$conn = mysqli_connect("localhost", "root", "", "cyber-media");
+$conn = mysqli_connect("sql177.main-hosting.eu", "u357928024_leo2", '$jr;QaM|N5A', "u357928024_cyber_media");
 
 if (!$conn) {
 	die("Error connecting to database: " . mysqli_connect_error());
