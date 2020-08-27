@@ -10,10 +10,13 @@
     vertical-align: top;
     display: inline-block;
     max-width: 500px;
-    padding: 16px;
 }
 
-.user .bio {
+.user .preview-image-outer img {
+    border-radius: 50%;
+}
+
+.user .edit-bio {
     vertical-align: top;
     display: inline-block;
     text-align: left;
@@ -21,10 +24,9 @@
     width: 100%;
     position: relative;
     font-size: 1.25em;
-    padding: 16px;
 }
 
-.bio textarea {
+.edit-bio textarea {
     min-width: 100%;
     max-width: 100%;
     font-size: 1em;
@@ -35,4 +37,44 @@
     border-radius: 15px;
     padding: 16px;
     outline: 0;
+}
+
+.user .profile {
+    padding: 64px 32px;
+    position: relative;
+}
+
+.profile-image-outer {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-image-outer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transform: scale(1.5);
+    transition: 250ms ease-in-out;
+}
+
+.profile-image-outer:hover img {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.bio {
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding: 32px;
+}
+
+.bio .bio-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 64px);
 }

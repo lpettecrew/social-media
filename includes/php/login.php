@@ -15,6 +15,7 @@ if (isset($_POST['login-btn'])) {
         $reg_user_id = mysqli_fetch_assoc($result)['id'];
 
         $_SESSION['user'] = getUserById($reg_user_id); // Create user session with all user variables
+        header("Location: " . BASE_URL . 'user/?user=' . $_SESSION['user']['username']);
     }
 }
 

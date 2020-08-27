@@ -25,22 +25,29 @@ include('../includes/php/sign-up.php');
 
     <div class="login-outer">
         <div class="login-inner">
-            <h2>Sign up</h2>
-            <br>
-            <form action="index.php" method="POST">
-                <label for="username">Username: </label>
-                <input type="text" class="input" name="username" id="username">
+
+            <?php if (isset($_SESSION['user']['id'])) { ?>
+                <h2>You're already logged in as <?php echo $_SESSION['user']['username'] ?></h2>
                 <br>
-                <label for="email">Email: </label>
-                <input type="text" class="input" name="email" id="email">
+                <a href="<?php echo BASE_URL . 'includes/php/logout.php' ?>">Logout</a>
+            <?php } else { ?>
+                <h2>Sign up</h2>
                 <br>
-                <label for="password">Password: </label>
-                <input type="password" class="input" name="password" id="password">
+                <form action="index.php" method="POST">
+                    <label for="username">Username: </label>
+                    <input type="text" class="input" name="username" id="username">
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="text" class="input" name="email" id="email">
+                    <br>
+                    <label for="password">Password: </label>
+                    <input type="password" class="input" name="password" id="password">
+                    <br>
+                    <button class="btn" name="signup-btn" type="submit">Sign up</button>
+                </form>
                 <br>
-                <button class="btn" name="signup-btn" type="submit">Sign up</button>
-            </form>
-            <br>
-            <span>Already have an account? <a href="../login/">Log in</a></span>
+                <span>Already have an account? <a href="../login/">Log in</a></span>
+            <?php } ?>
         </div>
     </div>
     <?php include(ROOT_PATH . '/includes/components/footer.php') ?>
