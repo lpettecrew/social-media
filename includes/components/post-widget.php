@@ -13,7 +13,7 @@
         <span><a href="#">Dislike</a></span>
         <span><a href="#">View comments</a></span>
         <!-- Pressing view comments displays a dropdown of 3 comments, with the option to retrieve more. -->
-        <input type="text" placeholder="Add a comment..." class="add-comment-btn">
+        <input type="text" placeholder="Add a comment..." class="input">
         <!-- Press enter to post a comment -->
         <p class="add-comment-btn__span">Press ENTER to add comment</p>
     </div>

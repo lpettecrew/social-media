@@ -1,0 +1,26 @@
+.login-outer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    min-height: 600px;
+}
+
+.login-inner {
+    max-width: 1200px;
+    padding: 64px 32px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.login-inner form label {
+    width: 75px;
+}
+
+.input {
+    max-width: 500px !important;
+    display: inline-block;
+}

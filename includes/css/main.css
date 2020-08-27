@@ -80,6 +80,25 @@ a:hover {
             rgba(63, 63, 63, 0.05));
 }
 
+.input {
+    display: block;
+    background-color: #1b1b1b;
+    border: 0;
+    border-bottom: 1px solid #111111;
+    padding: 8px;
+    font-size: 1em;
+    outline: 0;
+    color: white;
+    margin: 12px 6px;
+    width: 100%;
+    transition: 250ms ease-in-out;
+}
+
+.input:active,
+.input:focus {
+    border-bottom: 1px solid rgb(0, 183, 255);
+}
+
 /*
 ===============
 HEADER
@@ -437,25 +456,6 @@ POST WIDGET
     left: 65px;
     /* account for pfp space */
     transform: translateY(-50%);
-}
-
-.add-comment-btn {
-    display: block;
-    background-color: #1b1b1b;
-    border: 0;
-    border-bottom: 1px solid #111111;
-    padding: 8px;
-    font-size: 1em;
-    outline: 0;
-    color: white;
-    margin: 12px 6px;
-    width: 100%;
-    transition: 250ms ease-in-out;
-}
-
-.add-comment-btn:active,
-.add-comment-btn:focus {
-    border-bottom: 1px solid rgb(0, 183, 255);
 }
 
 .add-comment-btn__span {
