@@ -40,6 +40,12 @@
             <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
             <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
             <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
+
+            <button class="btn">Show more</button>
+
+            <!-- Onclick update a variable limiting the amount of entries retrieved from database. -->
+
+            <!-- Could load more on scroll, but the user would never get to see the footer. -->
         </div>
     </div>
     <?php include(ROOT_PATH . '/includes/components/footer.php') ?>

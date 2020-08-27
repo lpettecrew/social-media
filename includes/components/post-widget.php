@@ -11,7 +11,10 @@
     <div class="post-actions">
         <span><a href="#">Like</a></span>
         <span><a href="#">Dislike</a></span>
-        <span><a href="#">Comment</a></span>
         <span><a href="#">View comments</a></span>
+        <!-- Pressing view comments displays a dropdown of 3 comments, with the option to retrieve more. -->
+        <input type="text" placeholder="Add a comment..." class="add-comment-btn">
+        <!-- Press enter to post a comment -->
+        <p class="add-comment-btn__span">Press ENTER to add comment</p>
     </div>
 </div>
