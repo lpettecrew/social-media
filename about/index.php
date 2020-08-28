@@ -24,7 +24,7 @@
         <div class="about-inner">
             <h2>About</h2>
             <br>
-            <p>Cyber Media is an app created by <span class="footer-promotion"><a href="https://lpettecrew.com" style="color: grey;">Leo Pettecrew</a></span> and Jacob Beere.</p>
+            <p>Cyber Media is an app created by <span class="footer-promotion"><a href="https://lpettecrew.com" style="color: grey;">Leo Pettecrew</a></span>, Jacob Beere and Thomas Martin.</p>
             <p>The goal of this project was to create a social media app similar to <a href="https://twitter.com/">Twitter</a>, where users can create their own posts, and send other users messages.</p>
             <p>This application is only to showcase personal ability and is in no ways a commercial product.</p>
             <p>You can check out the source code to our application on my <a href="https://github.com/lpettecrew/social-media">GitHub</a>.</p>
