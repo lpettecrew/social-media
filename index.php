@@ -22,18 +22,24 @@
 
     <div class="home">
         <!-- Greet user if logged in -->
-        <div class="greeting">
-            <h2>Welcome back, <i>LPettecrew</i></h2>
-            <a href="<?php echo BASE_URL . 'logout.php' ?>">Logout</a>
-        </div>
+        <?php if (isset($_SESSION['user']['id'])) { ?>
+            <div class="greeting">
+                <h2>Welcome back, <i>LPettecrew</i></h2>
+                <a href="<?php echo BASE_URL . 'includes/php/logout.php' ?>">Logout</a>
+            </div>
 
-        <form class="post-form__form">
-            <textarea class="post-text__textarea">This is my first post!! #MyFirstPost</textarea>
-            <input name="post-btn" type="submit" class="btn" style="float: right;" value="Post">
-            <br style="clear: right;">
-            <br>
-            <hr class="post-form-split__hr">
-        </form>
+            <form class="post-form__form">
+                <textarea class="post-text__textarea">This is my first post!! #MyFirstPost</textarea>
+                <input name="post-btn" type="submit" class="btn" style="float: right;" value="Post">
+                <br style="clear: right;">
+                <br>
+                <hr class="post-form-split__hr">
+            </form>
+        <?php } else { ?>
+            <div class="greeting">
+                <h2>You're not logged in, log in <a href="<?php echo BASE_URL . 'login/' ?>">here</a>.</h2>
+            </div>
+        <?php } ?>
 
         <div class="feed">
             <h1 class="feed-title__h1">My feed</h1>

@@ -7,7 +7,7 @@
         <p>This app was create as a personal project and does not intend to breach any copyright infringement laws.</p>
         <p>This is not a commercial site.</p>
         <br>
-        <div class="footer-promotion">Made by <a class="" href="https://lpettecrew.com">Leo Pettecrew</a> and Jacob Beere</div>
+        <div class="footer-promotion">Made by <a class="" href="https://lpettecrew.com">Leo Pettecrew</a>. Jacob Beere and Thomas Martin</div>
     </div>
 </footer>
 </div>
