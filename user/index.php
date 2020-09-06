@@ -66,9 +66,39 @@ if (isset($_GET['user'])) {
                 <h2><i>@<?php echo $user['username'] ?></i>'s posts:</h2>
                 <br>
                 <div class="posts">
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
+                    <div class="retrieve-posts">
+                        <?php
+                        $query = "SELECT * FROM `posts` WHERE user_id=" . $user['id'] . " LIMIT 3";
+                        $posts = mysqli_query($conn, $query);
+                        if (mysqli_num_rows($posts) > 0) {
+                            while ($post = mysqli_fetch_assoc($posts)) { ?>
+                                <div class="post">
+                                    <div class="post-meta">
+                                        <a href="#"><img class="profile-picture__img" src="<?php echo BASE_URL . 'images/Profile%20Picture.png' ?>" alt="Leo Pettecrew"></a>
+                                        <a class="username" href="#">@<?php echo getUserPostInfo($post['user_id'])['username'] ?></a>
+                                    </div>
+                                    <div class="post-body">
+                                        <p class="body-text__p">
+                                            <?php echo $post['body'] ?>
+                                        </p>
+                                    </div>
+                                    <div class="post-actions">
+                                        <span><a href="#"><i class="fas fa-thumbs-up"></i> (<?php echo $post['likes'] ?>)</a></span>
+                                        <span><a href="#"><i class="fas fa-thumbs-down"></i> (<?php echo $post['dislikes'] ?>)</a></span>
+                                        <span><a href="#">View comments</a></span>
+                                        <!-- Pressing view comments displays a dropdown of 3 comments, with the option to retrieve more. -->
+                                        <input type="text" placeholder="Add a comment..." class="add-comment-btn input">
+                                        <!-- Press enter to post a comment -->
+                                        <p class="add-comment-btn__span">Press ENTER to add comment</p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } else { ?>
+                            <h2>No posts.</h2>
+                            <br>
+                        <?php } ?>
+                    </div>
+                    <button class="load-more-btn-user btn">Show more</button>
                 </div>
             <?php } else if ($user != NULL) { // If the user if viewing someone else's profile 
             ?>
@@ -91,9 +121,39 @@ if (isset($_GET['user'])) {
                 <h2><i>@<?php echo $user['username'] ?></i>'s posts:</h2>
                 <br>
                 <div class="posts">
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
-                    <?php include(ROOT_PATH . '/includes/components/post-widget.php'); ?>
+                    <div class="retrieve-posts">
+                        <?php
+                        $query = "SELECT * FROM `posts` WHERE user_id=" . $user['id'] . " LIMIT 3";
+                        $posts = mysqli_query($conn, $query);
+                        if (mysqli_num_rows($posts) > 0) {
+                            while ($post = mysqli_fetch_assoc($posts)) { ?>
+                                <div class="post">
+                                    <div class="post-meta">
+                                        <a href="#"><img class="profile-picture__img" src="<?php echo BASE_URL . 'images/Profile%20Picture.png' ?>" alt="Leo Pettecrew"></a>
+                                        <a class="username" href="#">@<?php echo getUserPostInfo($post['user_id'])['username'] ?></a>
+                                    </div>
+                                    <div class="post-body">
+                                        <p class="body-text__p">
+                                            <?php echo $post['body'] ?>
+                                        </p>
+                                    </div>
+                                    <div class="post-actions">
+                                        <span><a href="#"><i class="fas fa-thumbs-up"></i> (<?php echo $post['likes'] ?>)</a></span>
+                                        <span><a href="#"><i class="fas fa-thumbs-down"></i> (<?php echo $post['dislikes'] ?>)</a></span>
+                                        <span><a href="#">View comments</a></span>
+                                        <!-- Pressing view comments displays a dropdown of 3 comments, with the option to retrieve more. -->
+                                        <input type="text" placeholder="Add a comment..." class="add-comment-btn input">
+                                        <!-- Press enter to post a comment -->
+                                        <p class="add-comment-btn__span">Press ENTER to add comment</p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } else { ?>
+                            <h2>No posts.</h2>
+                            <br>
+                        <?php } ?>
+                    </div>
+                    <button class="load-more-btn-user btn">Show more</button>
                 </div>
             <?php } else { // If user doesn't exist 
             ?>
@@ -109,6 +169,7 @@ if (isset($_GET['user'])) {
         <!-- If not, present them with public information that cannot be edited -->
     </div>
     <?php include(ROOT_PATH . '/includes/components/footer.php') ?>
+    <script src="<?php echo BASE_URL . 'includes/js/loadPosts.js' ?>"></script>
     <script src="<?php echo BASE_URL . 'includes/js/imagePreview.js' ?>"></script>
 </body>
 
